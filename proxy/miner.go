@@ -6,7 +6,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/ethereum/ethash"
+	"github.com/daethereum/daethereum"
 	"github.com/daethereum/go-dae/common"
 )
 
