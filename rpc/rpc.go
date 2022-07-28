@@ -14,7 +14,7 @@ import (
 
 	"github.com/daethereum/go-dae/common"
 
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/daethereum/open-dae-pool/util"
 )
 
 type RPCClient struct {

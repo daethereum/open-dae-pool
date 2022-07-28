@@ -10,9 +10,9 @@ import (
 
 	"github.com/daethereum/go-dae/common/hexutil"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/storage"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/daethereum/open-dae-pool/rpc"
+	"github.com/daethereum/open-dae-pool/storage"
+	"github.com/daethereum/open-dae-pool/util"
 )
 
 const txCheckInterval = 5 * time.Second

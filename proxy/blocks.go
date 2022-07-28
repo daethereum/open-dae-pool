@@ -9,8 +9,8 @@ import (
 
 	"github.com/daethereum/go-dae/common"
 
-	"github.com/sammy007/open-ethereum-pool/rpc"
-	"github.com/sammy007/open-ethereum-pool/util"
+	"github.com/daethereum/open-dae-pool/rpc"
+	"github.com/daethereum/open-dae-pool/util"
 )
 
 const maxBacklog = 3
