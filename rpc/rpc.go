@@ -12,8 +12,6 @@ import (
 	"strings"
 	"sync"
 
-	"github.com/daethereum/go-dae/common"
-
 	"github.com/daethereum/go-dae/common/hexutil"
 	"github.com/daethereum/open-dae-pool/util"
 )
