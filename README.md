@@ -437,7 +437,7 @@ otherwise you will get errors on start because of JSON comments.**
             "gasPrice"
     :
         "50000000000",
-            // Send payment only if miner's balance is >= 0.5 Ether
+            // Send payment only if miner's balance is >= 5 DAE
             "threshold"
     :
         500000000,
