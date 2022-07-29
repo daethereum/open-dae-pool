@@ -8,14 +8,14 @@ export default Ember.Route.extend({
     this.get('intl').setLocale('en-us');
   },
 
-	model: function() {
+  model: function () {
     var url = config.APP.ApiUrl + 'api/stats';
-    return Ember.$.getJSON(url).then(function(data) {
+    return Ember.$.getJSON(url).then(function (data) {
       return Ember.Object.create(data);
     });
-	},
+  },
 
-  setupController: function(controller, model) {
+  setupController: function (controller, model) {
     this._super(controller, model);
     Ember.run.later(this, this.refresh, 5000);
   }

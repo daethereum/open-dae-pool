@@ -2,9 +2,9 @@ import Ember from 'ember';
 import config from '../config/environment';
 
 export default Ember.Route.extend({
-  model: function() {
+  model: function () {
     var url = config.APP.ApiUrl + 'api/miners';
-    return Ember.$.getJSON(url).then(function(data) {
+    return Ember.$.getJSON(url).then(function (data) {
       if (data.miners) {
         // Convert map to array
         data.miners = Object.keys(data.miners).map((value) => {
@@ -27,7 +27,7 @@ export default Ember.Route.extend({
     });
   },
 
-  setupController: function(controller, model) {
+  setupController: function (controller, model) {
     this._super(controller, model);
     Ember.run.later(this, this.refresh, 5000);
   }

@@ -10,12 +10,9 @@ Commit branch and hash: (`master`, `ba60e1c`)
 
 #### Expected behaviour
 
-
 #### Actual behaviour
 
-
 #### Steps to reproduce the behaviour
-
 
 #### Backtrace
 

@@ -2,7 +2,7 @@
 var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 var Funnel = require('broccoli-funnel');
 
-module.exports = function(defaults) {
+module.exports = function (defaults) {
   var app = new EmberApp(defaults, {
     // Add options here
     SRI: {

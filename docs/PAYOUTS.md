@@ -4,7 +4,8 @@ Keep in mind that pool maintains all balances in **Shannon**.
 
 # Processing and Resolving Payouts
 
-**You MUST run payouts module in a separate process**, ideally don't run it as daemon and process payouts 2-3 times per day and watch how it goes. **You must configure logging**, otherwise it can lead to big problems.
+**You MUST run payouts module in a separate process**, ideally don't run it as daemon and process payouts 2-3 times per
+day and watch how it goes. **You must configure logging**, otherwise it can lead to big problems.
 
 Module will fetch accounts and sequentially process payouts.
 
@@ -32,19 +33,23 @@ If transaction submission was successful, we have a TX hash:
 
 And so on. Repeat for every account.
 
-After payout session, payment module will perform `BGSAVE` (background saving) on Redis if you have enabled `bgsave` option.
+After payout session, payment module will perform `BGSAVE` (background saving) on Redis if you have enabled `bgsave`
+option.
 
 ## Resolving Failed Payments (automatic)
 
-If your payout is not logged and not confirmed by Ethereum network you can resolve it automatically. You need to payouts in maintenance mode by setting up `RESOLVE_PAYOUT=1` or `RESOLVE_PAYOUT=True` environment variable:
+If your payout is not logged and not confirmed by DAE network you can resolve it automatically. You need to payouts
+in maintenance mode by setting up `RESOLVE_PAYOUT=1` or `RESOLVE_PAYOUT=True` environment variable:
 
 `RESOLVE_PAYOUT=1 ./build/bin/open-dae-pool payouts.json`.
 
-Payout module will fetch all rows from Redis with key `eth:payments:pending` and credit balance back to miners. Usually you will have only single entry there.
+Payout module will fetch all rows from Redis with key `eth:payments:pending` and credit balance back to miners. Usually
+you will have only single entry there.
 
 If you see `No pending payments to resolve` we have no data about failed debits.
 
-If there was a debit operation performed which is not followed by actual money transfer (after `eth_sendTransaction` returned an error), you will likely see:
+If there was a debit operation performed which is not followed by actual money transfer (after `eth_sendTransaction`
+returned an error), you will likely see:
 
 ```
 Will credit back following balances:
@@ -84,7 +89,7 @@ Result will be like this:
 
 It's a pair of `LOGIN:AMOUNT`.
 
->2) "1462920526"
+> 2) "1462920526"
 
 It's a `UNIXTIME`
 
@@ -137,7 +142,8 @@ DEL "eth:payments:lock"
 
 ## Resolving Missing Payment Entries
 
-If pool actually paid but didn't log transaction, scroll up to `Store Payment in Redis` section. You should have a transaction hash from block explorer.
+If pool actually paid but didn't log transaction, scroll up to `Store Payment in Redis` section. You should have a
+transaction hash from block explorer.
 
 ## Transaction Didn't Confirm
 

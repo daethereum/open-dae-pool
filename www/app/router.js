@@ -5,13 +5,13 @@ var Router = Ember.Router.extend({
   location: config.locationType
 });
 
-Router.map(function() {
-  this.route('account', { path: '/account/:login' }, function() {
+Router.map(function () {
+  this.route('account', {path: '/account/:login'}, function () {
     this.route('payouts');
   });
   this.route('not-found');
 
-  this.route('blocks', function() {
+  this.route('blocks', function () {
     this.route('immature');
     this.route('pending');
   });
