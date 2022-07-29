@@ -7,6 +7,8 @@ import (
 	"strings"
 	"time"
 
+	"gopkg.in/redis.v3"
+
 	"github.com/daethereum/open-dae-pool/util"
 )
 
