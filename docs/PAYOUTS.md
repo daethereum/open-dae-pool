@@ -53,13 +53,13 @@ returned an error), you will likely see:
 
 ```
 Will credit back following balances:
-Address: 0xb85150eb365e7df0941f0cf08235f987ba91506a, Amount: 166798415 Shannon, 2016-05-11 08:14:34
+Address: 0x40E973475C290b0Ab0463F54d5E11E1F24d04867, Amount: 166798415 Shannon, 2016-05-11 08:14:34
 ```
 
 followed by
 
 ```
-Credited 166798415 Shannon back to 0xb85150eb365e7df0941f0cf08235f987ba91506a
+Credited 166798415 Shannon back to 0x40E973475C290b0Ab0463F54d5E11E1F24d04867
 ```
 
 Usually every maintenance run ends with following message and halt:
@@ -85,7 +85,7 @@ ZREVRANGE "eth:payments:pending" 0 -1 WITHSCORES
 
 Result will be like this:
 
-> 1) "0xb85150eb365e7df0941f0cf08235f987ba91506a:25000000"
+> 1) "0x40E973475C290b0Ab0463F54d5E11E1F24d04867:25000000"
 
 It's a pair of `LOGIN:AMOUNT`.
 
